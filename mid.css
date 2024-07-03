@@ -1,12 +1,18 @@
 * {
     margin: 0;
-    padding: 0px;
+    padding: 0.1px;
     box-sizing: border-box;
+}
+.body{
+    padding-top: 120px;
+}
+.header{
+    top: 0;
 }
 .category-section {
     margin-top: 70px; 
 }
-
+@media (max-width: 768px){body{padding-top:100px;}}
 .cart-count {
     background-color: transparent; 
     color: black; 
@@ -14,32 +20,38 @@
     padding: 5px 23px; 
     font-size: 14px; 
 }
-
+.navbar{
+    min-width: 100%;
+}
 .image {
-    height: 85%;
+    height: 100%;
     background-color: #202124;
-    margin-bottom: 38%;
+    /* margin-bottom: 38%; */
     min-width: 100%;
     max-width: 100%;
-    /* margin-top: 200px; */
+    margin-top: 50%;
 }
 
 .imglarge {
-    height: 45%;
+    /* margin-top: 38%; */
+    height: 55%;
     width: 100%;
 }
 
 .rowbutton {
-    width: 45%;
-    padding: 20px;
-    margin-top: 12%;
+    align-items: center;
+    /* width: 45%; */
+    padding: 10px;
+    /* margin-top: 15%; */
     /* margin-top: 700px; */
 }
 
 .rowtext {
-    font-size: 16px;
+    font-size-adjust: inherit;
+    flex-direction: row;
+    font-size: 90%;
     font-weight: bold;
-    margin-right: 15px;
+    margin-right:10px;
 }
 /* 
        .image {
@@ -89,11 +101,12 @@
         .middlebox {
             /* display: flex; */
             flex-direction: column;
-            margin-left: 15%;
+          padding-left: 15%;
             /* margin-right: 5%; */
         }
 
         .middboxrow {
+            padding: 1%;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -104,8 +117,8 @@
         .middtext {
             color: #202124;
             font-weight: bold;
-            font-size: 27px;
-            
+            font-size: 2rem;
+            font-size-adjust: inherit;
         }
 
         .midhr {
@@ -116,8 +129,9 @@
         }
 
         .gridtext {
+            font-size-adjust: inherit;
             color: #202124;
-            font-size: 16px;
+            font-size: 1.1rem;
             font-weight: bold;
             padding: 10px;
         }
@@ -159,9 +173,12 @@
         }
         
         .offer {
+            padding: 1%;
             background-color: white;
             border-radius: 10px;
             width: 22%;
+            min-height: 30%;
+            max-height: 20%;
             /* min-width: 250px; */
         }
         
@@ -174,7 +191,7 @@
         
         .offer-content img {
             width: 100%;
-            height: auto;
+            height: 20%;
             border-radius: 5px;
         }
         
@@ -200,13 +217,38 @@
         }
         
         @media (max-width: 768px) {
+            .image {
+                /* height: 85%; */
+                background-color: #202124;
+                /* margin-bottom: 38%; */
+                min-width: 100%;
+                max-width: 100%;
+                margin-top: 100%;
+                padding-top: 30%;
+            }
+            .imglarge {
+                /* margin-top: 38%; */
+                height: 80%;
+                width: 100%;
+            }
+            
+            .middboxrow {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-around;
+                width: 100%;
+            }
             .offers-container {
                 flex-direction: column;
                 align-items: center;
             }
         
             .offer {
-                width: 70%;
+                width: 40%;
+                min-width: 70%;
+                max-height: 30%;
+                max-height: 20%;
             }
            
             .footer-content {
@@ -334,6 +376,7 @@
     justify-content: space-around;
 }
 
+
 .footcoloms {
     display: flex;
     flex-direction: column;
@@ -346,4 +389,47 @@
     font-weight: bold;
     margin-bottom: 10px;
 }   
-    
+
+.location-access {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar .navbar-brand img {
+    margin-top: -5px; /* Adjust logo alignment */
+}
+
+.navbar .navbar-nav {
+    width: 100%; /* Ensure navbar-nav takes full width */
+}
+
+.navbar .navbar-toggler {
+    order: 1; /* Ensure toggler button is first in order */
+}
+
+.navbar .navbar-collapse {
+    order: 2; /* Ensure collapsed content is second in order */
+    justify-content: flex-end; /* Align collapsed content to the right */
+}
+
+.navbar .navbar-nav .nav-item {
+    margin-right: 15px; /* Adjust spacing between navbar items */
+}
+
+.navbar .navbar-nav .nav-item:last-child {
+    margin-right: 0; /* Remove margin-right from last navbar item */
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #333; /* Adjust link color */
+}
+.navbar .right-links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .right-links .nav-link {
+    margin-left: 10px;
+    color: #333; /* Adjust link color */
+}
